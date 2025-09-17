@@ -1,4 +1,4 @@
-setwd("C:/Users/sjega/Desktop/busqueda")
+setwd("path/busqueda")
 library(readxl)
 library(dplyr)
 
@@ -56,4 +56,5 @@ write.table(filtrado_bueno,"./filtrado_bueno.csv",na="",row.names = F,sep=";")
 
 filtrado_nobueno<-filter(all[!all$DOI %in% filtrado_bueno$DOI,])
 write.table(filtrado_nobueno,"./filtrado_nobueno.csv",na="",row.names = F,sep=";")
+
 
